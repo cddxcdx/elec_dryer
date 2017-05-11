@@ -1,0 +1,182 @@
+;=================================================================
+; GSD-Datei: CP 1242-5 
+; SIEMENS AG IIA SC IC
+; File name : SI01818E.GSD
+; File version : V1.0 
+; Date: 08.10.2010
+;=================================================================
+#Profibus_DP
+GSD_Revision = 5
+Vendor_Name = "SIEMENS AG"
+Model_Name = "CM 1242-5"
+Revision = "V1"
+Ident_Number = 0x818E
+Protocol_Ident = 0
+Station_Type = 0
+FMS_supp = 0
+Hardware_Release = "1"
+Software_Release = "V1.0"
+9.6_supp = 1
+19.2_supp = 1
+45.45_supp = 1
+93.75_supp = 1
+187.5_supp = 1
+500_supp = 1
+1.5M_supp = 1
+3M_supp	 = 1
+6M_supp	 = 1
+12M_supp = 1
+MaxTsdr_9.6 = 20
+MaxTsdr_19.2 = 20
+MaxTsdr_45.45 = 20
+MaxTsdr_93.75 = 20
+MaxTsdr_187.5 = 20
+MaxTsdr_500 = 20
+MaxTsdr_1.5M = 25
+MaxTsdr_3M = 50
+MaxTsdr_6M = 100
+MaxTsdr_12M = 200
+;
+Repeater_Ctrl_Sig = 2
+;Implementation_Type = "DPC31"
+;Bitmap_Device	= "ASi8139n" ; todo
+;Bitmap_Diag	= "ASi8139s"
+;Bitmap_SF	= "ASi8139s"
+;
+OrderNumber	= "6GK7 242-5DX30-0XE0" 
+Info_Text = "CM 1242-5"
+Freeze_Mode_supp = 1
+Sync_Mode_supp	= 1
+Auto_Baud_supp	= 1
+Set_Slave_Add_supp = 0
+Min_Slave_Intervall = 6 ; in 100us. base
+Max_Diag_Data_Len = 128
+Modul_Offset = 1
+Slave_Family = 3@S7 1200
+Fail_Safe    = 1
+Modular_Station	= 1
+Max_Module = 32
+Max_Input_Len = 240  
+Max_Output_Len = 240 
+Max_Data_Len = 480  
+;
+DPV1_Slave              = 1
+
+;DPV1_Slave_required 	= 1
+C1_Read_Write_supp      = 1
+C1_Max_Data_Len         = 240
+C1_Response_Timeout 	= 1000	;max. Time for read/write (10ms Units)
+C1_Read_Write_required  = 0		;not required to be accessed
+;DPV1_Data_Types         = 0	
+Diagnostic_Alarm_supp 	= 1
+Alarm_Type_Mode_supp    = 1	 
+WD_Base_1ms_supp        = 1
+
+
+C2_Read_Write_supp      = 1
+C2_Max_Data_Len         = 240
+C2_Response_Timeout 	= 1000	;max. Time for read/write (10ms Units)
+C2_Max_Count_Channels   = 1
+Max_Initiate_PDU_Length = 244
+
+Ident_Maintenance_supp  = 1
+
+
+;---------------------- Head Parameter -------------------------
+
+Max_User_Prm_Data_Len = 237
+
+
+; DPV1-Prm-Bytes 8-10
+Ext_User_Prm_Data_Const(0) = 0x00,0x00,0x00
+
+
+
+; <Module-Definition-List>
+
+Module = "1 Byte Input"   0x40,0x80
+1
+EndModule
+Module = "1 Byte Output"  0x80,0x80
+2
+EndModule
+Module = "2 Byte Input"   0x40,0x81
+3
+EndModule
+Module = "2 Byte Output"  0x80,0x81
+4
+EndModule
+Module = "4 Byte Input"   0x40,0x83
+5
+EndModule
+Module = "4 Byte Output"  0x80,0x83
+6
+EndModule
+Module = "8 Byte Input"   0x40,0x87
+7
+EndModule
+Module = "8 Byte Output"  0x80,0x87
+8
+EndModule
+Module = "16 Byte Input"  0x40,0x8F
+9
+EndModule
+Module = "16 Byte Output" 0x80,0x8F
+10
+EndModule
+Module = "32 Byte Input"  0x40,0x9F
+11
+EndModule
+Module = "32 Byte Output" 0x80,0x9F
+12
+EndModule
+Module = "64 Byte Input"  0x40,0xBF
+13
+EndModule
+Module = "64 Byte Output" 0x80,0xBF
+14
+EndModule
+
+Module = "1 Word Input"   0x40,0xC0
+15
+EndModule
+Module = "1 Word Output"  0x80,0xC0
+16
+EndModule
+Module = "2 Word Input"   0x40,0xC1
+17
+EndModule
+Module = "2 Word Output"  0x80,0xC1
+18
+EndModule
+Module = "4 Word Input"   0x40,0xC3
+19
+EndModule
+Module = "4 Word Output"  0x80,0xC3
+20
+EndModule
+Module = "8 Word Input"   0x40,0xC7
+21
+EndModule
+Module = "8 Word Output"  0x80,0xC7
+22
+EndModule
+Module = "16 Word Input"  0x40,0xCF
+23
+EndModule
+Module = "16 Word Output" 0x80,0xCF
+24
+EndModule
+Module = "32 Word Input"  0x40,0xDF
+25
+EndModule
+Module = "32 Word Output" 0x80,0xDF
+26
+EndModule
+Module = "64 Word Input"  0x40,0xFF
+27
+EndModule
+Module = "64 Word Output" 0x80,0xFF
+28
+EndModule
+
